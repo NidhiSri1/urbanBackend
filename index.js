@@ -8,11 +8,11 @@ const axios = require("axios");
 
 app.use(express.json());
 
-app.get("/", (req, res) => {
-    res.send("hi");
-});
+// app.get("/", (req, res) => {
+//     res.send("hi");
+// });
 
-app.use("/service", ServiceControllers);
+app.use("/", ServiceControllers);
 
 app.listen(port, async () => {
     try {

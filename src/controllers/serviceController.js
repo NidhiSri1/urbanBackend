@@ -13,6 +13,7 @@ router.post("/", async (req, res) => {
 router.get("/", async (req, res) => {
     try {
         const getData = await Services.create(req.body);
+        console.log(getData);
         res.send(getData);
     } catch (err) {
         console.log(err);
