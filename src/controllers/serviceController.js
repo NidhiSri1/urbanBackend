@@ -10,5 +10,13 @@ router.post("/", async (req, res) => {
         console.log(err);
     }
 });
+router.get("/", async (req, res) => {
+    try {
+        const getData = await Services.create(req.body);
+        res.send(getData);
+    } catch (err) {
+        console.log(err);
+    }
+});
 
 module.exports = router;
