@@ -12,7 +12,8 @@ router.post("/", async (req, res) => {
 });
 router.get("/", async (req, res) => {
     try {
-        const getData = await Services.create(req.body);
+        const getData = await Services.find().lean().exec();
+        console.log(getData);
         console.log(getData);
         res.send(getData);
     } catch (err) {

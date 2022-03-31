@@ -17,7 +17,7 @@ app.use("/", ServiceControllers);
 app.listen(port, async () => {
     try {
         await connect();
-        console.log("Server Started on port 3002");
+        console.log(`Server Started on port ${port}`);
     } catch (err) {
         console.log(err);
     }
